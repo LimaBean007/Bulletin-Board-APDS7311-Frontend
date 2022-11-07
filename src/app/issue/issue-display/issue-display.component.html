@@ -1,0 +1,33 @@
+<br>
+<mat-card>
+    <h2>Posts</h2>
+</mat-card>
+
+<div *ngIf="issues.length < 1">
+    <br>
+    <mat-card>
+        <h5>No Posts found</h5>
+    </mat-card>
+</div>
+
+<br>
+<div class="card-list">
+    <mat-card *ngFor="let issue of issues">
+
+        <mat-card-header>
+            <mat-card-title for="Content"[innerHTML]="issue.name"></mat-card-title>
+
+        </mat-card-header>
+
+        <ng-template #standardPost>
+            <mat-card-content for="Content"[innerHTML]="issue.name">
+            </mat-card-content>
+        </ng-template>
+
+        <mat-card-actions align="end">
+            <button mat-stroked-button color="warn" (click)="ondelete(issue._id)">Delete Post</button>
+        </mat-card-actions>
+        <mat-divider></mat-divider>
+    </mat-card>
+</div>
+<br>

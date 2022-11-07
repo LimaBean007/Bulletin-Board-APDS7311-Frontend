@@ -1,0 +1,22 @@
+<br>
+<mat-card>
+    <form (submit)="onaddissue(addIssue)" #addIssue="ngForm">
+
+        <h2>Add Post</h2>
+
+        <br>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Issue Content</mat-label>
+
+            <input matInput type="text" ngModel name="enteredName" placeholder="Issue Name" required minlength="1"
+                pattern="^[a-zA-z0-9\s_-]+$" #enteredName="ngModel" />
+            <mat-error *ngIf="enteredName.invalid">{{postError}}</mat-error>
+        </mat-form-field>
+
+        <br>
+
+        <button mat-raised-button color="primary" type="submit">Add Post</button>
+
+    </form>
+</mat-card>

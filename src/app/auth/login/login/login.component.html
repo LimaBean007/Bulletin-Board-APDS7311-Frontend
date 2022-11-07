@@ -1,0 +1,35 @@
+<br>
+<mat-card>
+    <form (submit)="onlogin(loginform)" #loginform="ngForm">
+        
+        <h2>Login</h2>
+
+        <p>If you do not have an account, please <a [routerLink]="['/signup']"
+                routerLinkActive="router-link-active">Sign Up</a>.</p>
+
+        <br>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Email</mat-label>
+
+            <input matInput type="email" ngModel name="enteredusername" placeholder="Username" required minlength="1"
+                pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" #enteredusername="ngModel" />
+            <mat-error *ngIf="enteredusername.invalid"> {{emailError}}</mat-error>
+        </mat-form-field>
+
+        <br>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Password</mat-label>
+
+            <input matInput type="password" ngModel name="enteredpassword" placeholder="password" required minlength="1"
+                pattern="^([a-zA-z0-9@*#]{8,15})$" #enteredpassword="ngModel" />
+            <mat-error *ngIf="enteredpassword.invalid">{{passwordError}} </mat-error>
+        </mat-form-field> 
+
+        <br>
+
+        <button mat-raised-button color="primary" type="submit">Log in</button>
+
+    </form>
+</mat-card>

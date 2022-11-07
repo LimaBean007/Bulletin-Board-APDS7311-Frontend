@@ -1,0 +1,33 @@
+form {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+   
+}
+button{
+   font-size: medium;
+   background-color: aqua;
+}
+
+input {
+    
+    text-align: center;
+    align-self: center;
+    font-size: large;
+   
+}
+
+mat-form-field {
+    margin: 200;
+    width: 500px;
+
+
+}
+
+.mat-button-base {
+    margin: 0%;
+    align-self: center;
+
+}

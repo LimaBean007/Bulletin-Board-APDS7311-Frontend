@@ -1,0 +1,33 @@
+body{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+  }
+  
+  .outlet{
+    width: 75vw;
+  }
+  
+  router-outlet{
+    align-self: center;
+    justify-self: center;
+  }
+  
+  .title-center {
+    margin: 0 auto;
+    color: rgb(0, 0, 0);
+  }
+  
+  .title-toolbar {
+    background: #6078ff;
+  }
